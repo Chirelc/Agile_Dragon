@@ -17,8 +17,8 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestRunner_US00 {
     private List<Dragon> listDragon;
     private Habitat habitat;
-    private Dragon Smaug;
-    private Dragon Dino;
+    private Dragon smaug;
+    private Dragon dino;
 
     @Given("un habitat qui comprend un lieu {string}")
     public void un_habitat_qui_comprend_un_lieu(String string) {
@@ -31,9 +31,8 @@ public class TestRunner_US00 {
     @Given("une  liste de dragon comprend deux dragons")
     public void une_liste_de_dragon_comprend_deux_dragons() {
         // Write code here that turns the phrase above into concrete actions
-        Smaug=new Dragon();
-        Dino=new Dragon();
-        throw new io.cucumber.java.PendingException();
+        smaug =new Dragon();
+        dino =new Dragon();
     }
 
 
@@ -41,24 +40,24 @@ public class TestRunner_US00 {
     public void un_habitat_comprend_une_liste_de_dragons_listDragon() {
         // Write code here that turns the phrase above into concrete actions
         listDragon =new ArrayList<Dragon>();
-        throw new io.cucumber.java.PendingException();
+        habitat.setListeDragon((ArrayList<Dragon>) listDragon);
     }
 
 
     @When("le maire décide de loger un dragon")
     public void le_maire_décide_de_loger_un_dragon() {
         // Write code here that turns the phrase above into concrete actions
-        listDragon.add(Smaug);
-        listDragon.add(Dino);
-        throw new io.cucumber.java.PendingException();
+        smaug.setHabitat();
+        dino.setHabitat();
+        habitat.ajoutDragonHabitat(dino);
+        habitat.ajoutDragonHabitat(smaug);
     }
 
     @Then("le système met à jour le nombre de dragons dans  l'habitat {int}.")
     public void le_système_met_à_jour_le_nombre_de_dragons_dans_l_habitat(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
-        assertTrue( Smaug.isInHabitat(habitat));
-        assertTrue( Dino.isInHabitat(habitat));
+        assertTrue( smaug.isInHabitat(habitat));
+        assertTrue( dino.isInHabitat(habitat));
         assertEquals( listDragon.size(),int1);
-        throw new io.cucumber.java.PendingException();
     }
 }
