@@ -19,15 +19,15 @@ public class TestRunner_US02 {
     public void un_dragon_dino_Dragon() {
         // Write code here that turns the phrase above into concrete actions
         dino=new Dragon();
-        throw new io.cucumber.java.PendingException();
     }
 
     @Given("Ce dragon loge dans un habiat situé à {string}")
     public void ce_dragon_loge_dans_un_habiat_situé_à(String string) {
         // Write code here that turns the phrase above into concrete actions
         habitat=new Habitat(string);
+        listDragon=new ArrayList<Dragon>();
+        habitat.setListeDragon((ArrayList<Dragon>) listDragon);
         listDragon.add(dino);
-        throw new io.cucumber.java.PendingException();
     }
 
     @When("dino meure")
@@ -35,7 +35,6 @@ public class TestRunner_US02 {
         habitat.supprimeDragonHabitat(dino);
 
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
     }
 
     @Then("le système enlève dino de l'habitat et la lise de dragons se met à jour {int}")
@@ -44,7 +43,7 @@ public class TestRunner_US02 {
         habitat.supprimeDragonHabitat(dino);
         dino=null;
         assertFalse(habitat.isDragoIn(dino));
-        throw new io.cucumber.java.PendingException();
+        assertEquals(int1,listDragon.size());
     }
 
 
