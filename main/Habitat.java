@@ -58,8 +58,8 @@ public boolean isDragoIn(Dragon d) {
 
 }
 public void Demenage(Habitat h, Dragon d) {
-	this.supprimeDragonHabitat(d);
 	h.ajoutDragonHabitat(d);
+	this.supprimeDragonHabitat(d);
 	}
 
 public ArrayList<Dragon> getListeDragon() {
