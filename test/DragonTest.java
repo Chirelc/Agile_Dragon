@@ -140,6 +140,13 @@ public void testDragonChangeHabitat() throws Exception{
 	
 	
 }
+@Test
+    public void testLogementAdaptateur()throws Exception{
+        LogementAdaptator l=new LogementAdaptator();
+        l.setHabitat(habitat);
+        assertEquals(3,l.getNbrEtages());
+
+    }
 
 
 
