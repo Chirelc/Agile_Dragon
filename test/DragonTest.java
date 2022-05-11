@@ -1,7 +1,5 @@
 package test;
-import main.Biens;
-import main.Dragon;
-import main.Habitat;
+import main.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -141,12 +139,14 @@ public void testDragonChangeHabitat() throws Exception{
 	
 }
 @Test
-    public void testLogementAdaptateur()throws Exception{
-        LogementAdaptator l=new LogementAdaptator();
-        l.setHabitat(habitat);
-        assertEquals(3,l.getNbrEtages());
+public void testLogementAdaptateur()throws Exception{
+    LogementAdaptator l=new LogementAdaptator("3 rue du feu");
+    l.ajoutDragonHabitat(Smaug);
+    Batiment b = new Batiment();
+    l.setBatiment(b);
+    assertEquals(3,b.getNbrEtages());
 
-    }
+}
 
 
 

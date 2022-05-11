@@ -1,12 +1,11 @@
-Feature: My US
-  As a utilisateur final
-  I want calculer le nombre total de fenetres dun batiment
-  So that pouvoir concevoir le batiment.
-
+Feature:US_06
+  En tant qu'utilisateur final
+  je souhaite calculer le nombre total de fenetres dun batiment
+  pour  pouvoir concevoir le batiment.
 
   Scenario Outline: calcul le nombre total de fenêtres
     Given le nombre d'etages <nbEtage> et le nombre de fenetres <nbFenetre> dun batiment
-    When lutilisateur demande le calcul du nombre total de fenetres
+    When l'utilisateur demande le calcul du nombre total de fenetres
     Then le <produit> doit etre retourné.
 
     Examples: 
