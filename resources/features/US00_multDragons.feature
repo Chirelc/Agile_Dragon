@@ -13,7 +13,7 @@ Feature: US_00
 
     Examples:
       | lieu       | nbrDragon |
-      | "Grotte"   | 2      |
+      | "grotte"   | 2      |
 
 
 

@@ -9,4 +9,4 @@ When dino meure
 Then le système enlève dino de l'habitat et la lise de dragons se met à jour <nbrDragon>
 Examples:
 | lieu  | nbrDragon |
-| "Grotte" | 0 |
+| "grotte" | 0 |

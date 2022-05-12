@@ -7,8 +7,8 @@ Feature: US_05
     And un dragon qui attend d'être loger
     And un dragon <dragon1> y loge
     When on ajoute le dragon <dragon2> dans le logement
-    Then celui ci n'est pas ajouté a la liste de dragons du logement
+    Then celui ci n'est pas ajouté à la liste de dragons du logement
 
     Examples:
       |dragon1| dragon2|lieu       |
-      |"Spyro"|"Mushu"| "3 rue du feu"   |
+      |"spyro"|"mushu"| "3 rue du feu"   |

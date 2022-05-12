@@ -18,8 +18,8 @@ public boolean  ajoutDragonHabitat(Dragon d) {
 		if(listeDragon.get(i).equals(d)) {
 			m=true;
 			return m;
-		}		
-	}	
+		}
+	}
 	this.listeDragon.add(d);
 	d.setHabitat(this);
 	return m;
@@ -29,7 +29,7 @@ public boolean supprimeDragonHabitat(Dragon d ){
 	for(int i =0;i<listeDragon.size();i++) {
 		if(listeDragon.get(i).equals(d)) {
 			listeDragon.remove(d);
-			d.setHabitat();
+			d.setNullHabitat();
 			return m;
 		}		
 	}
@@ -40,7 +40,7 @@ public boolean supprimeDragonHabitat(Dragon d ){
 public boolean supprimeHabitat(){
 	boolean m =true;
 	for(int i =0;i<listeDragon.size();i++) {
-		listeDragon.get(i).setHabitat();	
+		listeDragon.get(i).setNullHabitat();
 	}
 	listeDragon.clear();
 	m=false; 

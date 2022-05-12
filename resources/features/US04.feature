@@ -10,5 +10,5 @@ When le maire décide de déménager le dragon dans un plus grand logement2
 Then le système met à jour  le logement du dragon et  calcul du nombre total de fenetres <nbrTotal> du batiment2
 
 Examples:
-| lieu |lieu2| nbrTotal|
- | "3 rue du feu"  |"4 rue des ailes " |40|
+ | lieu       |lieu2| nbrTotal|
+ | "3 rue du feu"   |"4 rue des ailes " |40|

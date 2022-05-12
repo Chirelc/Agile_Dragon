@@ -1,11 +1,10 @@
-package cucumber.test;
+package main;
 
 import java.util.ArrayList;
 
 public class Batiment {
 	 	private int nbrEtages;
 	    private int nbrFenetres;
-	    private Door maPorte;//porte principale
 	    private ArrayList<Door> listePortes;
 
 	    public int getNbrFenetres() {
@@ -24,31 +23,39 @@ public class Batiment {
 	       this.nbrEtages = NbrEtages;
 	   }
 	   
-	    public void setPorte(Door maPorte) {
-	       this.maPorte = maPorte;
-	   }
-	   
-	   public Door getPorte() {
-	       return maPorte;
-	   }
+
 
 	    /**
 	     * Constructeur d'objets de classe Batiment
 	     */
-	    public batiment()
+	    public Batiment()
 	    {
 	        // initialisation des variables d'instance
 	        //x = 0;
-	        this.maPorte = new Door();
+			// on considère par défaut 3 habitants par étage
 	        this.nbrEtages = 3;
 	        this.nbrFenetres = 4;
-	        Door p = new Door();
-	        this.listePortes = new ArrayList<Door>();
-	        this.listePortes.add(p);
-
+			this.listePortes = new ArrayList<Door>();
+			for(int i =0;i<3*nbrEtages;i++ ){
+				Door d=new Door();
+				this.listePortes.add(d);
+			}
 	    }
 
-	    
+	public Batiment(int nbrEtages,int nbrFenetres,int nbPortes )
+	{
+		// initialisation des variables d'instance
+		//x = 0;
+		this.nbrEtages =nbrEtages ;
+		this.nbrFenetres = nbrFenetres;
+		this.listePortes=new ArrayList<Door>();
+		for( int i =0;i<nbPortes;i++){
+			Door d=new Door();
+			this.listePortes.add(d);
+		}
+		this.listePortes = listePortes ;
+
+	}
 	    public int totalFenetres()
 	    {
 	        int e = this.getNbrEtages();

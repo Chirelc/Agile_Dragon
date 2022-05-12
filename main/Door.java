@@ -1,4 +1,4 @@
-package cucumber.test;
+package main;
 
 public class Door {
 	private String couleur;

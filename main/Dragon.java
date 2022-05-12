@@ -6,8 +6,7 @@ package main;
  * @author (votre nom)
  * @version (un numéro de version ou une date)
  */
-public class Dragon 
-{
+public class Dragon {
     // variables d'instance - remplacez l'exemple qui suit par le vôtre
     private boolean feu;
     private boolean gentille;
@@ -15,13 +14,10 @@ public class Dragon
     /**
      * Constructeur d'objets de classe Dragon
      */
-    public Dragon()
-    {
+    public Dragon() {
         // initialisation des variables d'instanceint pattes
         this.feu = true;
         this.gentille=true;
-       
-        
     }
    public boolean getFeu(){
         return this.feu;
@@ -43,31 +39,16 @@ public class Dragon
 	   }
 	   h.ajoutDragonHabitat(this);
 	   habitat=h;
-	   
 }
- 
-  public void setHabitat() {
-        
+  public void setNullHabitat() {
 	this. habitat=null;
-} 
-
+}
   public Habitat getHabitat() {
 	  return  habitat;
   }
   public boolean isInHabitat(Habitat h) {
-	  if(this.habitat!=h) {
-		  return false;
-	  }else {return true;}
+	  if(this.habitat==h) {
+		  return true;
+	  }else {return false;}
   }
-
-
-
-    /**
-     * Un exemple de méthode - remplacez ce commentaire par le vôtre
-     *
-     * @param  y   le paramètre de la méthode
-     * @return     la somme de x et de y
-     */
-
-    
 }
