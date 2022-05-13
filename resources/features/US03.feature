@@ -12,7 +12,7 @@ Feature: US_03
     Examples:
      |dragon | lieu       | nbrDragon |
      |"spyro" | "3 rue du feu"   | 1|
-
+     |"spyro" | "3 rue du feu"   | 3|
 
 
 

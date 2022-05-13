@@ -12,8 +12,8 @@ Feature: US_00
     Then le système met à jour le nombre de dragons dans  l'habitat <nbrDragon>.
 
     Examples:
-      | lieu       | nbrDragon |
-      | "grotte"   | 2      |
+      | lieu     | nbrDragon |
+      | "grotte" | 2         |
 
 
 

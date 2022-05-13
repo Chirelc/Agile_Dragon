@@ -8,7 +8,7 @@ Feature:US_06
     When l'utilisateur demande le calcul du nombre total de fenetres
     Then le <produit> doit etre retourné.
 
-    Examples: 
-      | nbEtage  | nbFenetre | produit  |
-      | 5 | 6 | 30|
-      | 3 | 4 | 12 |
+    Examples:
+      | nbEtage | nbFenetre | produit |
+      | 5       | 6         | 30      |
+      | 3       | 4         | 12      |
